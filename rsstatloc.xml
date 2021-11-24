@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="522ef3ad-fcfa-47e8-9e00-7177fa90421a" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <dataset>
+    <title>Water Quality Sampling near Piney Point Station locations</title>
+    <creator>
+      <individualName>
+        <givenName>Marcus</givenName>
+        <surName>Beck</surName>
+      </individualName>
+      <electronicMailAddress>mbeck@tbep.org</electronicMailAddress>
+    </creator>
+    <abstract>From March 30th to April 9th, approximately 215 million gallons of wastewater from Piney Point were released into Tampa Bay. The Tampa Bay Estuary Program is working with regional partners to coordinate and synthesize water quality, benthic, seagrass, and fisheries monitoring data. The primary pollutants of concern for this discharge are phosphorus and nitrogen (primarily ammonia nitrogen), which may stimulate an algae response and cause adverse effects on seagrass, fish, and other wildlife. 
+  This dataset contains spatial data for each unique station.  This dataset relates gives spatial data for chemical and physical water quality measurements.</abstract>
+    <keywordSet>
+      <keyword>estuaries</keyword>
+      <keyword>oceans</keyword>
+      <keyword>algae</keyword>
+      <keyword>water quality</keyword>
+      <keyword>watersheds</keyword>
+      <keyword>phosphate</keyword>
+      <keyword>phosphorus</keyword>
+      <keyword>nitrogen</keyword>
+      <keyword>phytoplankton</keyword>
+      <keyword>plankton</keyword>
+      <keyword>seawater</keyword>
+      <keyword>seagrass</keyword>
+      <keyword>nutrients</keyword>
+      <keyword>geographic information systems</keyword>
+      <keyword>marine</keyword>
+      <keywordThesaurus>LTER controlled vocabulary</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>organic matter movement</keyword>
+      <keyword>mineral cycling</keyword>
+      <keyword>disturbance</keyword>
+      <keywordThesaurus>LTER core area</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>This dataset is released to the public and may be freely downloaded. Please keep the designated Contact person informed of any plans to use the dataset. Consultation or collaboration with the original investigators is strongly encouraged. Publications and data products that make use of the dataset must include proper acknowledgement. For more information on LTER Network data access and use policies, please see: http://www.lternet.edu/data/netpolicy.html.</intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Tampa Bay Florida, Middle Tampa Bay</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-82.8</westBoundingCoordinate>
+          <eastBoundingCoordinate>-82.4</eastBoundingCoordinate>
+          <northBoundingCoordinate>27.9</northBoundingCoordinate>
+          <southBoundingCoordinate>27.4</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2021-03-23</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2021-11-17</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>Species</taxonRankName>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+    </coverage>
+    <contact>
+      <individualName>
+        <givenName>Marcus</givenName>
+        <surName>Beck</surName>
+      </individualName>
+      <organizationName>Tampa Bay Estuary Program</organizationName>
+      <address>
+        <deliveryPoint>263 13th Ave South</deliveryPoint>
+        <city>St. Petersburg</city>
+        <administrativeArea>FL</administrativeArea>
+        <postalCode>33701</postalCode>
+        <country>USA</country>
+      </address>
+      <phone>(727) 893-2765 x205</phone>
+      <electronicMailAddress>mbeck@tbep.org</electronicMailAddress>
+    </contact>
+    <dataTable>
+      <entityName>rsstatloc.csv</entityName>
+      <entityDescription>Tampa Bay - Water Quality Monitoring Station Locations</entityDescription>
+      <physical>
+        <objectName>rsstatloc.csv</objectName>
+        <dataFormat>
+          <textFormat>
+            <recordDelimiter>&#13;
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>source_lng</attributeName>
+          <attributeDefinition>Agency that took sample - Label</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Source Label</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>source</attributeName>
+          <attributeDefinition>Agency that took Sample - short hand</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>cosp</code>
+                    <definition>City of St. Pete</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>epchc</code>
+                    <definition>Hillsborough County EPC</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>esa</code>
+                    <definition>ESA</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>fldep</code>
+                    <definition>Florida DEP</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>mpnrd</code>
+                    <definition>Manatee County</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>ncf</code>
+                    <definition>New College FL</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>pinco</code>
+                    <definition>Pinellas County</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>sbep</code>
+                    <definition>Sarasota Bay Estuary Program</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>tbep</code>
+                    <definition>Tampa Bay Estuary Program</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>uf</code>
+                    <definition>University of Florida</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>usf</code>
+                    <definition>University of South Florida</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>station</attributeName>
+          <attributeDefinition>Station</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Station</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>lng</attributeName>
+          <attributeDefinition>Longitude (Decimal Degrees)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>lat</attributeName>
+          <attributeDefinition>Latitude (Decimal Degrees)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+  </dataset>
+</eml:eml>
