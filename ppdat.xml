@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="4d2936fe-dc32-4b62-833b-f15a3605acd9" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="2e817199-d508-428d-a93b-7b921001a37f" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
   <dataset>
     <title>2021 Piney Point Sampling in Tampa Bay</title>
     <creator>
@@ -25,15 +25,9 @@
       <keyword>seagrass</keyword>
       <keyword>nutrients</keyword>
       <keyword>marine</keyword>
-      <keywordThesaurus>LTER controlled vocabulary</keywordThesaurus>
+      <keywordThesaurus>Tampa Bay vocabulary</keywordThesaurus>
     </keywordSet>
-    <keywordSet>
-      <keyword>organic matter movement</keyword>
-      <keyword>mineral cycling</keyword>
-      <keyword>disturbance</keyword>
-      <keywordThesaurus>LTER core area</keywordThesaurus>
-    </keywordSet>
-    <intellectualRights>This dataset is released to the public and may be freely downloaded. Please keep the designated Contact person informed of any plans to use the dataset. Consultation or collaboration with the original investigators is strongly encouraged. Publications and data products that make use of the dataset must include proper acknowledgement. For more information on LTER Network data access and use policies, please see: http://www.lternet.edu/data/netpolicy.html.</intellectualRights>
+    <intellectualRights>This dataset is released to the public and may be freely downloaded. Please keep the designated Contact person informed of any plans to use the dataset. Consultation or collaboration with the original investigators is strongly encouraged. Publications and data products that make use of the dataset must include proper acknowledgement.</intellectualRights>
     <coverage>
       <geographicCoverage>
         <geographicDescription>Tampa Bay Florida, Middle/Lower Tampa Bay and portions of northern Sarasota Bay</geographicDescription>
@@ -1065,6 +1059,178 @@
             </nominal>
           </measurementScale>
         </attribute>
+        <attribute>
+          <attributeName>station</attributeName>
+          <attributeDefinition>Station</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Station</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>lng</attributeName>
+          <attributeDefinition>Longitude (Decimal Degrees)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>lat</attributeName>
+          <attributeDefinition>Latitude (Decimal Degrees)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable>
+      <entityName>kbrdat.csv</entityName>
+      <entityDescription>karenia brevis monitoring data</entityDescription>
+      <physical>
+        <objectName>kbrdat.csv</objectName>
+        <dataFormat>
+          <textFormat>
+            <recordDelimiter>&#13;
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeDefinition>Date</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>station</attributeName>
+          <attributeDefinition>Station</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Station</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>var</attributeName>
+          <attributeDefinition>Variable - short hand</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>kb</code>
+                    <definition>Karenia brevis</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>sal</code>
+                    <definition>Salinity</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>temp</code>
+                    <definition>Water temperature</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>uni</attributeName>
+          <attributeDefinition>Result unit of measure - short hand</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>100kcelll</code>
+                    <definition>100k cells/L</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>c</code>
+                    <definition>Degrees celsius</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>ppt</code>
+                    <definition>parts per thousand</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>val</attributeName>
+          <attributeDefinition>Result value</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable>
+      <entityName>kbrpts.csv</entityName>
+      <entityDescription>Karenia brevis monitoring station locations</entityDescription>
+      <physical>
+        <objectName>kbrpts.csv</objectName>
+        <dataFormat>
+          <textFormat>
+            <recordDelimiter>&#13;
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
         <attribute>
           <attributeName>station</attributeName>
           <attributeDefinition>Station</attributeDefinition>

@@ -361,10 +361,71 @@ phyptsTable <- list(
   physical = physical,
   attributeList = attributeList)
 
-
 # kbrdat ------------------------------------------------------------------
 
+attributes <-
+  tibble::tribble(
+    ~attributeName, ~attributeDefinition,                ~formatString,  ~definition, ~unit, ~numberType,
+    "date",       "Date",                                "YYYY-MM-DD",  NA,           NA,       NA,
+    "station",    "Station",                             NA,            "Station",    NA,       NA,
+    "var",        "Variable - short hand",               NA,            NA,           NA,       NA,
+    "uni",        "Result unit of measure - short hand", NA,            NA,           NA,       NA,
+    "val",        "Result value",                        NA,            NA,           "dimensionless",       "real",
+  )
+
+var <- c(
+  kb = 'Karenia brevis', 
+  sal = 'Salinity', 
+  temp = 'Water temperature'
+)
+uni <- c(
+  `100kcelll` = '100k cells/L', 
+  `c` = 'Degrees celsius', 
+  ppt = 'parts per thousand'
+)
+
+factors <- rbind(
+  data.frame(
+    attributeName = "var",
+    code = names(var),
+    definition = unname(var)
+  ), 
+  data.frame(
+    attributeName = "uni", 
+    code = names(uni), 
+    definition = unname(uni)
+  )
+)
+
+attributeList <- set_attributes(attributes, factors, col_classes = c("Date", "character", "factor", "factor", "numeric"))
+
+physical <- set_physical("kbrdat.csv")
+
+kbrdatTable <- list(
+  entityName = "kbrdat.csv",
+  entityDescription = "karenia brevis monitoring data",
+  physical = physical,
+  attributeList = attributeList)
+
 # kbrpts ------------------------------------------------------------------
+
+attributes <-
+  tibble::tribble(
+    ~attributeName, ~attributeDefinition,         ~formatString, ~definition,  ~unit,           ~numberType,
+    "station",    "Station",                      NA,            "Station",    NA,              NA,
+    "lng",        "Longitude (Decimal Degrees)",  NA,            NA,           "dimensionless", "real",
+    "lat",        "Latitude (Decimal Degrees)",   NA,            NA,           "dimensionless", "real",
+  )
+
+attributeList <- set_attributes(attributes, col_classes = c("character", "numeric", "numeric"))
+
+physical <- set_physical("kbrpts.csv")
+
+kbrptsTable <- list(
+  entityName = "kbrpts.csv",
+  entityDescription = "Karenia brevis monitoring station locations",
+  physical = physical,
+  attributeList = attributeList)
 
 # universal metadata for all files ----------------------------------------
 
@@ -401,7 +462,7 @@ contact <- list(
 
 keywordSet <- list(
   list(
-    keywordThesaurus = "LTER controlled vocabulary",
+    keywordThesaurus = "Tampa Bay vocabulary",
     keyword = list("estuaries",
                    "oceans",
                    "algae",
@@ -416,17 +477,13 @@ keywordSet <- list(
                    "seagrass",
                    "nutrients",
                    "marine")
-  ),
-  list(
-    keywordThesaurus = "LTER core area",
-    keyword =  list("organic matter movement", "mineral cycling", "disturbance")
   ))
 
 title <- "2021 Piney Point Sampling in Tampa Bay"
 
 abstract <- 'From March 30th to April 9th, approximately 215 million gallons of wastewater from Piney Point were released into Tampa Bay. The Tampa Bay Estuary Program is working with regional partners to coordinate and synthesize water quality, benthic, seagrass, and fisheries monitoring data. The primary pollutants of concern for this discharge are phosphorus and nitrogen (primarily ammonia nitrogen), which may stimulate an algae response and cause adverse effects on seagrass, fish, and other wildlife.'
 
-intellectualRights <- 'This dataset is released to the public and may be freely downloaded. Please keep the designated Contact person informed of any plans to use the dataset. Consultation or collaboration with the original investigators is strongly encouraged. Publications and data products that make use of the dataset must include proper acknowledgement. For more information on LTER Network data access and use policies, please see: http://www.lternet.edu/data/netpolicy.html.'
+intellectualRights <- 'This dataset is released to the public and may be freely downloaded. Please keep the designated Contact person informed of any plans to use the dataset. Consultation or collaboration with the original investigators is strongly encouraged. Publications and data products that make use of the dataset must include proper acknowledgement.'
 
 # combine the metadata
 dataset <- list(
@@ -437,7 +494,7 @@ dataset <- list(
   keywordSet = keywordSet,
   coverage = coverage,
   contact = contact,
-  dataTable = list(wqdatTable, wqptsTable, trndatTable, trnptsTable, phydatTable, phyptsTable))
+  dataTable = list(wqdatTable, wqptsTable, trndatTable, trnptsTable, phydatTable, phyptsTable, kbrdatTable, kbrptsTable))
 
 eml <- list(
   packageId = uuid::UUIDgenerate(),
