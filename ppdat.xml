@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="7f2e49df-d8dd-4cf7-b560-1c2e1652d812" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="4d2936fe-dc32-4b62-833b-f15a3605acd9" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
   <dataset>
     <title>2021 Piney Point Sampling in Tampa Bay</title>
     <creator>
@@ -78,7 +78,7 @@
     </contact>
     <dataTable>
       <entityName>wqdat.csv</entityName>
-      <entityDescription>Tampa Bay - Piney Point Water Quality Monitoring</entityDescription>
+      <entityDescription>Water quality monitoring data</entityDescription>
       <physical>
         <objectName>wqdat.csv</objectName>
         <dataFormat>
@@ -408,7 +408,7 @@
     </dataTable>
     <dataTable>
       <entityName>wqpts.csv</entityName>
-      <entityDescription>Tampa Bay - Water Quality Monitoring Station Locations</entityDescription>
+      <entityDescription>Water quality monitoring station locations</entityDescription>
       <physical>
         <objectName>wqpts.csv</objectName>
         <dataFormat>
@@ -749,7 +749,7 @@
     </dataTable>
     <dataTable>
       <entityName>trnpts.csv</entityName>
-      <entityDescription>Seagrass and macroalgae monitoring locations</entityDescription>
+      <entityDescription>Seagrass and macroalgae monitoring station locations</entityDescription>
       <physical>
         <objectName>trnpts.csv</objectName>
         <dataFormat>
@@ -808,22 +808,273 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>type</attributeName>
-          <attributeDefinition>Type</attributeDefinition>
+          <attributeName>lng</attributeName>
+          <attributeDefinition>Longitude (Decimal Degrees)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>lat</attributeName>
+          <attributeDefinition>Latitude (Decimal Degrees)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable>
+      <entityName>phydat.csv</entityName>
+      <entityDescription>Phytoplankton monitoring data</entityDescription>
+      <physical>
+        <objectName>phydat.csv</objectName>
+        <dataFormat>
+          <textFormat>
+            <recordDelimiter>&#13;
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeDefinition>Date</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>station</attributeName>
+          <attributeDefinition>Station</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Station</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>source</attributeName>
+          <attributeDefinition>Agency that took Sample - short hand</attributeDefinition>
           <storageType>string</storageType>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <enumeratedDomain>
                   <codeDefinition>
-                    <code>discrete</code>
-                    <definition>discrete sample</definition>
+                    <code>epchc</code>
+                    <definition>Hillsborough County EPC</definition>
                   </codeDefinition>
                   <codeDefinition>
-                    <code>transect</code>
-                    <definition>transect survey</definition>
+                    <code>fldep</code>
+                    <definition>Florida DEP</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>fwri</code>
+                    <definition>Fish and Wildlife Research Institute</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>pinco</code>
+                    <definition>Pinellas County</definition>
                   </codeDefinition>
                 </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>typ</attributeName>
+          <attributeDefinition>Sample type</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Qualitative</code>
+                    <definition>Qualitative sample (present)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Quantitative</code>
+                    <definition>Quantitative sample as cells/L</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>species</attributeName>
+          <attributeDefinition>Species</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Species</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>val</attributeName>
+          <attributeDefinition>Cell concentration</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>valqual</attributeName>
+          <attributeDefinition>Qualitative cell concentration</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Very Low</code>
+                    <definition>cells/L &lt; 1e4</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Low</code>
+                    <definition>cells/L between 1e4 and 1e5</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Medium</code>
+                    <definition>cells/L between 1e5 and 1e6 </definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>High</code>
+                    <definition>cells/L &gt; 1e6</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>uni</attributeName>
+          <attributeDefinition>Units (cells/L)</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Units</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable>
+      <entityName>phypts.csv</entityName>
+      <entityDescription>Phytoplankton monitoring station locations</entityDescription>
+      <physical>
+        <objectName>phypts.csv</objectName>
+        <dataFormat>
+          <textFormat>
+            <recordDelimiter>&#13;
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>source</attributeName>
+          <attributeDefinition>Agency that surveyed the station - short hand</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>epchc</code>
+                    <definition>Hillsborough County EPC</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>fldep</code>
+                    <definition>Florida DEP</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>fwri</code>
+                    <definition>Fish and Wildlife Research Institute</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>pinco</code>
+                    <definition>Pinellas County</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>source_lng</attributeName>
+          <attributeDefinition>Agency that surveyed the station - long hand</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Source - long hand</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>station</attributeName>
+          <attributeDefinition>Station</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Station</definition>
+                </textDomain>
               </nonNumericDomain>
             </nominal>
           </measurementScale>

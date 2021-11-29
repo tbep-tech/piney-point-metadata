@@ -49,7 +49,8 @@ for(i in seq_along(fls)){
         lat = st_coordinates(.)[, 2]
       ) %>% 
       st_set_geometry(NULL) %>% 
-    select(-matches('col'))
+    select(-matches('col')) %>% 
+    select(-contains('typ'))
 
   # filter dates < Oct 1, make date as character
   if(!grepl('pts$', flnm))

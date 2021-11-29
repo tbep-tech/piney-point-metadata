@@ -19,10 +19,10 @@ attributes <-
     "val",        "Result Value",                                 NA,            NA,             "dimensionless",       "real",
     "qual",       "Qualifier value using FDEP scheme (https://floridadep.gov/lt/files/62-160_help-document_0.pdf)", NA,            "Qual code",                 NA,       NA,
     "bswqstation", "Corresponding Long-term Reference Station",   NA,            "Corresonding long-term refeference station",                 NA,       NA,
-    "lbs",        "Variable - Label",                             NA,            "Variable label",                 NA,       NA,
-    "nrmrng",     "Normal Value Range of Result",                 NA,            "Normal value range",                 NA,       NA,
-    "lbunis",     "Result Unit of measure - Label",               NA,            "Result unit",                 NA,       NA,
-    "inrng",      "Result in Range of Normal value",              NA,            "Result in range",                 NA,       NA)
+    "lbs",        "Variable - Label",                             NA,            "Variable label",      NA,       NA,
+    "nrmrng",     "Normal Value Range of Result",                 NA,            "Normal value range",  NA,       NA,
+    "lbunis",     "Result Unit of measure - Label",               NA,            "Result unit",         NA,       NA,
+    "inrng",      "Result in Range of Normal value",              NA,            "Result in range",     NA,       NA)
 
 source <- c(
   cosp = "City of St. Pete",
@@ -95,7 +95,7 @@ physical <- set_physical("wqdat.csv")
 
 wqdatTable <- list(
   entityName = "wqdat.csv",
-  entityDescription = "Tampa Bay - Piney Point Water Quality Monitoring",
+  entityDescription = "Water quality monitoring data",
   physical = physical,
   attributeList = attributeList)
 
@@ -108,7 +108,7 @@ attributes <-
     "source",     "Agency that took Sample - short hand", NA,            "Source Short hand", NA,       NA,
     "station",    "Station",                              NA,            "Station",           NA,       NA,
     "lng",        "Longitude (Decimal Degrees)",          NA,            "Longitude",         "dimensionless",      "real",
-    "lat",        "Latitude (Decimal Degrees)",           NA,            "Latitude",          "dimensionless",       "real",)
+    "lat",        "Latitude (Decimal Degrees)",           NA,            "Latitude",          "dimensionless",      "real",)
 
 source <- c(
   cosp = "City of St. Pete",
@@ -139,7 +139,7 @@ physical <- set_physical("wqpts.csv")
 
 wqptsTable <- list(
   entityName = "wqpts.csv",
-  entityDescription = "Tampa Bay - Water Quality Monitoring Station Locations",
+  entityDescription = "Water quality monitoring station locations",
   physical = physical,
   attributeList = attributeList)
 
@@ -234,7 +234,6 @@ attributes <-
     ~attributeName, ~attributeDefinition,                 ~formatString, ~definition,   ~unit,          ~numberType,
     "source",     "Agency that surveyed the transect - short hand", NA,  "Source",      NA,              NA,
     "station",    "Station",                              NA,            "Station",     NA,              NA,
-    "type",       "Type",                                 NA,            "Type",        NA,              NA,
     "lng",        "Longitude (Decimal Degrees)",          NA,            NA,            "dimensionless", "real",
     "lat",        "Latitude (Decimal Degrees)",           NA,            NA,            "dimensionless", "real")
 
@@ -245,9 +244,55 @@ source <- c(
   uf = "University of Florida"
 )
 
-type <- c(
-  discrete = "discrete sample", 
-  transect = "transect survey"
+# combine factors
+factors <- rbind(
+  data.frame(
+    attributeName = "source",
+    code = names(source),
+    definition = unname(source)
+  )
+)
+
+attributeList <- set_attributes(attributes, factors, col_classes = c("factor", "character", "numeric", "numeric"))
+
+physical <- set_physical("trnpts.csv")
+
+trnptsTable <- list(
+  entityName = "trnpts.csv",
+  entityDescription = "Seagrass and macroalgae monitoring station locations",
+  physical = physical,
+  attributeList = attributeList)
+
+# phydat ------------------------------------------------------------------
+
+attributes <-
+  tibble::tribble(
+    ~attributeName, ~attributeDefinition,                 ~formatString,  ~definition,  ~unit,           ~numberType,
+    "date",       "Date",                                 'YYYY-MM-DD',   NA,           NA,              NA,
+    "station",    "Station",                              NA,             "Station",    NA,              NA,
+    "source",     "Agency that took Sample - short hand", NA,             "Source",     NA,              NA,
+    "typ",        "Sample type",                          NA,             NA,           NA,              NA, 
+    "species",    "Species",                              NA,             "Species",    NA,              NA, 
+    "val",        "Cell concentration",                   NA,             NA,           "dimensionless", "real", 
+    "valqual",    "Qualitative cell concentration",       NA,             NA,           NA,              NA, 
+    "uni",        "Units (cells/L)",                      NA,             "Units",      NA,              NA,
+  )
+
+source <- c(
+  epchc = "Hillsborough County EPC",
+  fldep = "Florida DEP",
+  fwri = "Fish and Wildlife Research Institute",
+  pinco = "Pinellas County"
+)
+typ <- c(
+  Qualitative = "Qualitative sample (present)",
+  Quantitative = "Quantitative sample as cells/L" 
+)
+valqual <- c(
+  `Very Low` = 'cells/L < 1e4', 
+  Low = 'cells/L between 1e4 and 1e5', 
+  Medium = 'cells/L between 1e5 and 1e6 ', 
+  High = 'cells/L > 1e6'
 )
 
 # combine factors
@@ -258,25 +303,64 @@ factors <- rbind(
     definition = unname(source)
   ),
   data.frame(
-    attributeName = "type",
-    code = names(type),
-    definition = unname(type)
+    attributeName = "typ",
+    code = names(typ),
+    definition = unname(typ)
+  ),
+  data.frame(
+    attributeName = "valqual",
+    code = names(valqual),
+    definition = unname(valqual)
   )
 )
 
-attributeList <- set_attributes(attributes, factors, col_classes = c("factor", "character", "factor", "numeric", "numeric"))
+attributeList <- set_attributes(attributes, factors, col_classes = c("Date", "character", "factor", "factor", "character", "numeric", "factor", "character"))
 
-physical <- set_physical("trnpts.csv")
+physical <- set_physical("phydat.csv")
 
-trnptsTable <- list(
-  entityName = "trnpts.csv",
-  entityDescription = "Seagrass and macroalgae monitoring locations",
+phydatTable <- list(
+  entityName = "phydat.csv",
+  entityDescription = "Phytoplankton monitoring data",
   physical = physical,
   attributeList = attributeList)
 
-# phydat ------------------------------------------------------------------
-
 # phypts ------------------------------------------------------------------
+
+attributes <-
+  tibble::tribble(
+    ~attributeName, ~attributeDefinition,                         ~formatString,  ~definition,          ~unit,          ~numberType,
+    "source",     "Agency that surveyed the station - short hand", NA,            NA,                   NA,              NA,
+    "source_lng", "Agency that surveyed the station - long hand",  NA,            "Source - long hand", NA,              NA,
+    "station",    "Station",                                       NA,            "Station",            NA,              NA,
+    "lng",        "Longitude (Decimal Degrees)",                   NA,            NA,                   "dimensionless", "real",
+    "lat",        "Latitude (Decimal Degrees)",                    NA,            NA,                   "dimensionless", "real",
+    )
+
+source <- c(
+  epchc = "Hillsborough County EPC",
+  fldep = "Florida DEP",
+  fwri = "Fish and Wildlife Research Institute",
+  pinco = "Pinellas County"
+)
+
+factors <- rbind(
+  data.frame(
+    attributeName = "source",
+    code = names(source),
+    definition = unname(source)
+  )
+)
+
+attributeList <- set_attributes(attributes, factors, col_classes = c("factor", "character", "character", "numeric", "numeric"))
+
+physical <- set_physical("phypts.csv")
+
+phyptsTable <- list(
+  entityName = "phypts.csv",
+  entityDescription = "Phytoplankton monitoring station locations",
+  physical = physical,
+  attributeList = attributeList)
+
 
 # kbrdat ------------------------------------------------------------------
 
@@ -353,7 +437,7 @@ dataset <- list(
   keywordSet = keywordSet,
   coverage = coverage,
   contact = contact,
-  dataTable = list(wqdatTable, wqptsTable, trndatTable, trnptsTable))
+  dataTable = list(wqdatTable, wqptsTable, trndatTable, trnptsTable, phydatTable, phyptsTable))
 
 eml <- list(
   packageId = uuid::UUIDgenerate(),
