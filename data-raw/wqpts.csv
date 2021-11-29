@@ -1,0 +1,369 @@
+"source_lng","source","station","lng","lat"
+"City of St. Pete","cosp","COSPE7-A2103",-82.61439,27.72073
+"City of St. Pete","cosp","COSPE7-B2103",-82.62563,27.72276
+"City of St. Pete","cosp","COSPE7-C2103",-82.62064,27.73329
+"City of St. Pete","cosp","COSPE7-D2103",-82.61786,27.74488
+"ESA","esa","Between Piney Pt and Cockroach Bay",-82.54671,27.67496
+"ESA","esa","SBH1",-82.5662166666667,27.6063833333333
+"ESA","esa","SBH2",-82.5602833333333,27.6096
+"ESA","esa","SBH3",-82.5627333333333,27.6069166666667
+"ESA","esa","SBH4",-82.5672166666667,27.6079166666667
+"ESA","esa","SCRB1",-82.5178666666667,27.67635
+"ESA","esa","SCRB2",-82.5041333333333,27.7063
+"ESA","esa","SCRB3",-82.5062833333333,27.70465
+"ESA","esa","SMB1",-82.6101,27.5693833333333
+"ESA","esa","SMB2",-82.5967666666667,27.5746833333333
+"ESA","esa","SMB3",-82.6065,27.5635166666667
+"ESA","esa","SMR1",-82.6468333333333,27.5338
+"ESA","esa","SPPC1",-82.5436166666667,27.6627
+"ESA","esa","SPPC2",-82.5451333333333,27.6650833333333
+"ESA","esa","STCB1",-82.6086833333333,27.5515666666667
+"ESA","esa","STCB2",-82.6229666666667,27.5367
+"ESA","esa","STCB3",-82.6055666666667,27.5412833333333
+"ESA","esa","UF_jbysi",-82.59105,27.5918166666667
+"ESA","esa","UF_sonde3",-82.5466833333333,27.6779166666667
+"Florida DEP","fldep","P Port 1",-82.56319,27.63488
+"Florida DEP","fldep","P Port 2",-82.55759,27.63105
+"Florida DEP","fldep","P Port 3",-82.54427,27.63141
+"Florida DEP","fldep","P Port 4",-82.53695,27.6454
+"Florida DEP","fldep","Piney 1",-82.56516,27.64742
+"Florida DEP","fldep","Piney 10",-82.629644,27.572583
+"Florida DEP","fldep","Piney 11",-82.652494,27.576508
+"Florida DEP","fldep","Piney 12",-82.644553,27.5431
+"Florida DEP","fldep","Piney 13",-82.6717,27.552008
+"Florida DEP","fldep","Piney 14",-82.666833,27.533
+"Florida DEP","fldep","Piney 15",-82.70095,27.545808
+"Florida DEP","fldep","Piney 17",-82.5559,27.693399
+"Florida DEP","fldep","Piney 18",-82.49677,27.682529
+"Florida DEP","fldep","Piney 19",-82.5338,27.723801
+"Florida DEP","fldep","Piney 2",-82.57845,27.64948
+"Florida DEP","fldep","Piney 20",-82.4987,27.729
+"Florida DEP","fldep","Piney 21",-82.5203,27.778
+"Florida DEP","fldep","Piney 22",-82.4741,27.781299
+"Florida DEP","fldep","Piney 23",-82.43873,27.7764
+"Florida DEP","fldep","Piney 3",-82.5771,27.6434
+"Florida DEP","fldep","Piney 4",-82.5653,27.6358
+"Florida DEP","fldep","Piney 5",-82.59193,27.62852
+"Florida DEP","fldep","Piney 6",-82.5915,27.626
+"Florida DEP","fldep","Piney 7",-82.563904,27.6625
+"Florida DEP","fldep","Piney 8",-82.577642,27.612975
+"Florida DEP","fldep","Piney 9",-82.601167,27.605986
+"Hillsborough Co.","epchc","16",-82.533798,27.723801
+"Hillsborough Co.","epchc","19",-82.555901,27.693399
+"Hillsborough Co.","epchc","21",-82.563904,27.6625
+"Hillsborough Co.","epchc","21PP01s",-82.531517,27.6933
+"Hillsborough Co.","epchc","21PP02s",-82.525967,27.689117
+"Hillsborough Co.","epchc","21PP03s",-82.547217,27.663917
+"Hillsborough Co.","epchc","21PP04s",-82.55575,27.650017
+"Hillsborough Co.","epchc","21PP05s",-82.57405,27.615783
+"Hillsborough Co.","epchc","21PP06s",-82.56285,27.60555
+"Hillsborough Co.","epchc","21PP07s",-82.575533,27.607367
+"Hillsborough Co.","epchc","21PP09s",-82.617617,27.5754
+"Hillsborough Co.","epchc","21PP10s",-82.63065,27.57935
+"Hillsborough Co.","epchc","21PP20s",-82.59205,27.59725
+"Hillsborough Co.","epchc","22",-82.571198,27.608101
+"Hillsborough Co.","epchc","23",-82.599197,27.666
+"Hillsborough Co.","epchc","24",-82.619301,27.5884
+"Hillsborough Co.","epchc","25",-82.6679,27.662701
+"Hillsborough Co.","epchc","28",-82.6092,27.708401
+"Hillsborough Co.","epchc","82",-82.5718,27.751101
+"Hillsborough Co.","epchc","84",-82.498703,27.729
+"Hillsborough Co.","epchc","90",-82.591499,27.625999
+"Hillsborough Co.","epchc","91",-82.641502,27.627899
+"Hillsborough Co.","epchc","92",-82.686798,27.5737
+"Hillsborough Co.","epchc","93",-82.744102,27.578899
+"Hillsborough Co.","epchc","94",-82.783203,27.610001
+"Hillsborough Co.","epchc","95",-82.694702,27.6112
+"Hillsborough Co.","epchc","96",-82.691002,27.6378
+"Hillsborough Co.","epchc","BP01",-82.515124,27.6966468
+"Hillsborough Co.","epchc","C01",-82.5233517,27.6861018
+"Hillsborough Co.","epchc","DB01",-82.45987787,27.75123529
+"Hillsborough Co.","epchc","EGS01",-82.48450557,27.75163659
+"Hillsborough Co.","epchc","LC01",-82.49992,27.7122439
+"Hillsborough Co.","epchc","LM01",-82.4805269,27.7176708
+"Hillsborough Co.","epchc","MB01",-82.6045,27.5738
+"Hillsborough Co.","epchc","MC365",-82.6067,27.61245
+"Hillsborough Co.","epchc","MC395",-82.5731,27.56755
+"Hillsborough Co.","epchc","MC396",-82.6218,27.59106
+"Hillsborough Co.","epchc","MC405",-82.5873,27.55267
+"Hillsborough Co.","epchc","MC408",-82.5992,27.54783
+"Hillsborough Co.","epchc","MC422",-82.6332,27.55748
+"Hillsborough Co.","epchc","MC430",-82.60772,27.52936
+"Hillsborough Co.","epchc","MC431",-82.5979,27.5112
+"Hillsborough Co.","epchc","MC434",-82.6188,27.51733
+"Hillsborough Co.","epchc","RP01",-82.5418628,27.662158
+"Hillsborough Co.","epchc","SC01",-82.5311983,27.6780451
+"Hillsborough Co.","epchc","WB01",-82.44589849,27.76291175
+"Manatee Co.","mpnrd","202",-82.559067,27.665703
+"Manatee Co.","mpnrd","336",-82.565161,27.647422
+"Manatee Co.","mpnrd","357",-82.578453,27.649478
+"Manatee Co.","mpnrd","361",-82.591933,27.628517
+"Manatee Co.","mpnrd","362",-82.577642,27.612975
+"Manatee Co.","mpnrd","365",-82.60334731,27.61119972
+"Manatee Co.","mpnrd","386",-82.617833,27.605986
+"Manatee Co.","mpnrd","395",-82.573072,27.567553
+"Manatee Co.","mpnrd","396",-82.621756,27.591058
+"Manatee Co.","mpnrd","400",-82.629644,27.572583
+"Manatee Co.","mpnrd","405",-82.587333,27.552667
+"Manatee Co.","mpnrd","408",-82.599167,27.547833
+"Manatee Co.","mpnrd","421",-82.652494,27.576508
+"Manatee Co.","mpnrd","422",-82.633217,27.557483
+"Manatee Co.","mpnrd","425",-82.660733,27.548272
+"Manatee Co.","mpnrd","428",-82.6717,27.552008
+"Manatee Co.","mpnrd","430",-82.609581,27.527331
+"Manatee Co.","mpnrd","431",-82.597939,27.511197
+"Manatee Co.","mpnrd","432",-82.644553,27.5431
+"Manatee Co.","mpnrd","433",-82.632681,27.520964
+"Manatee Co.","mpnrd","434",-82.618833,27.517333
+"Manatee Co.","mpnrd","435",-82.666833,27.533
+"Manatee Co.","mpnrd","449",-82.70095,27.545808
+"Manatee Co.","mpnrd","452",-82.717056,27.541128
+"Manatee Co.","mpnrd","455",-82.731333,27.535
+"Manatee Co.","mpnrd","456",-82.6841982,27.53114983
+"Manatee Co.","mpnrd","458",-82.656833,27.497
+"Manatee Co.","mpnrd","459",-82.703611,27.528828
+"Manatee Co.","mpnrd","460",-82.685317,27.516708
+"Manatee Co.","mpnrd","464",-82.69269937,27.49299941
+"Manatee Co.","mpnrd","532",-82.54099843,27.50284947
+"Manatee Co.","mpnrd","535",-82.5675,27.503333
+"Manatee Co.","mpnrd","587",-82.648742,27.473189
+"Manatee Co.","mpnrd","589",-82.683075,27.481503
+"Manatee Co.","mpnrd","590",-82.66368327,27.46900004
+"Manatee Co.","mpnrd","597",-82.59234624,27.41264954
+"Manatee Co.","mpnrd","598",-82.63489699,27.43279982
+"Manatee Co.","mpnrd","600",-82.605933,27.418747
+"Manatee Co.","mpnrd","604",-82.580642,27.402419
+"Manatee Co.","mpnrd","607",-82.600517,27.399042
+"Manatee Co.","mpnrd","608",-82.592244,27.380203
+"Manatee Co.","mpnrd","658",-82.699286,27.481117
+"Manatee Co.","mpnrd","659",-82.68374834,27.46324914
+"Manatee Co.","mpnrd","660",-82.675222,27.453319
+"Manatee Co.","mpnrd","667",-82.660781,27.437144
+"Manatee Co.","mpnrd","668",-82.646856,27.421519
+"Manatee Co.","mpnrd","669",-82.643167,27.411167
+"Manatee Co.","mpnrd","676",-82.62344951,27.39384945
+"Manatee Co.","mpnrd","BH01",-82.54345,27.60949
+"Manatee Co.","mpnrd","BH02",-82.56236,27.60739
+"Manatee Co.","mpnrd","PM Out",-82.543727,27.631487
+"Manatee Co.","mpnrd","PMB01",-82.5638,27.63084
+"Manatee Co.","mpnrd","PMB02",-82.56072,27.63403
+"Manatee Co.","mpnrd","PMB03",-82.56434,27.63517
+"Manatee Co.","mpnrd","PPC41",-82.531956,27.640414
+"Manatee Co.","mpnrd","SCI N",-82.59946,27.66504
+"Manatee Co.","mpnrd","SCI S",-82.6076,27.65432
+"New College Fl.","ncf","2021-0409-1",-82.6098,27.5455
+"New College Fl.","ncf","2021-0409-2",-82.61128,27.54269
+"New College Fl.","ncf","2021-0409-3",-82.56806,27.56915
+"New College Fl.","ncf","2021-0409-4",-82.56429,27.57629
+"New College Fl.","ncf","2021-0409-5",-82.60939,27.56489
+"New College Fl.","ncf","2021-0409-6",-82.61069,27.56128
+"New College Fl.","ncf","2021-0409-7",-82.5937,27.55495
+"New College Fl.","ncf","2021-0409-8",-82.58231,27.54826
+"New College Fl.","ncf","2021-0416-1",-82.5693,27.50307
+"New College Fl.","ncf","2021-0416-2",-82.5701,27.51191
+"New College Fl.","ncf","2021-0416-3",-82.5084,27.52546
+"New College Fl.","ncf","2021-0416-4",-82.5054,27.51966
+"New College Fl.","ncf","2021-0416-5",-82.6195,27.52108
+"New College Fl.","ncf","2021-0416-6",-82.6268,27.52964
+"New College Fl.","ncf","2021-0512-1",-82.45943,27.52723
+"New College Fl.","ncf","2021-0512-3",-82.51719,27.51195
+"New College Fl.","ncf","2021-0512-4",-82.52799,27.51573
+"New College Fl.","ncf","2021-0512-5",-82.63692,27.52394
+"New College Fl.","ncf","2021-0513-1",-82.62047,27.54721
+"New College Fl.","ncf","2021-0513-2",-82.61909,27.55137
+"New College Fl.","ncf","2021-0513-3",-82.56912,27.56651
+"New College Fl.","ncf","2021-0513-4",-82.56902,27.56511
+"New College Fl.","ncf","2021-0513-5",-82.57843,27.55452
+"New College Fl.","ncf","2021-0513-6",-82.57991,27.5496
+"New College Fl.","ncf","2021-0513-7",-82.60589,27.53303
+"New College Fl.","ncf","2021-0615-1",-82.60233,27.53208
+"New College Fl.","ncf","2021-0615-2",-82.59185,27.5374
+"New College Fl.","ncf","2021-0616-1",-82.46169,27.53035
+"New College Fl.","ncf","2021-0616-3",-82.41681,27.52196
+"New College Fl.","ncf","2021-0616-4",-82.59966,27.50887
+"New College Fl.","ncf","2021-0616-5",-82.60794,27.56112
+"New College Fl.","ncf","2021-0623-1",-82.56831,27.56917
+"New College Fl.","ncf","2021-0623-3",-82.57833,27.56534
+"New College Fl.","ncf","2021-0623-5",-82.61475,27.51367
+"New College Fl.","ncf","2021-0623-6",-82.60291,27.50757
+"New College Fl.","ncf","2021-0623-7",-82.60857,27.52299
+"New College Fl.","ncf","2021-0713-1",-82.61748,27.5437
+"New College Fl.","ncf","2021-0713-3",-82.59842,27.54272
+"New College Fl.","ncf","2021-0713-4",-82.59869,27.55824
+"New College Fl.","ncf","2021-0713-5",-82.57964,27.56189
+"New College Fl.","ncf","2021-0713-6",-82.57815,27.57895
+"New College Fl.","ncf","2021-0714-1",-82.60883,27.5252
+"New College Fl.","ncf","2021-0714-2",-82.50892,27.52758
+"New College Fl.","ncf","2021-0714-3",-82.56429,27.50431
+"New College Fl.","ncf","2021-0714-4",-82.56166,27.50867
+"New College Fl.","ncf","2021-0714-5",-82.63866,27.5301
+"New College Fl.","ncf","2021-0714-6",-82.63139,27.51781
+"New College Fl.","ncf","2021-0715-1",-82.46806,27.52773
+"New College Fl.","ncf","2021-0715-2",-82.5097,27.52409
+"New College Fl.","ncf","2021-0715-3",-82.52934,27.50928
+"New College Fl.","ncf","2021-0715-4",-82.54268,27.508
+"New College Fl.","ncf","2021-0715-5",-82.50563,27.52696
+"New College Fl.","ncf","2021-0715-6",-82.50814,27.52673
+"New College Fl.","ncf","2021-0720-1",-82.50923,27.52509
+"New College Fl.","ncf","2021-0720-2",-82.51041,27.51582
+"New College Fl.","ncf","2021-0720-3",-82.45897,27.52997
+"New College Fl.","ncf","2021-0720-4",-82.46154,27.52904
+"New College Fl.","ncf","2021-0721-1",-82.61076,27.51092
+"New College Fl.","ncf","2021-0811-1",-82.50955,27.52483
+"New College Fl.","ncf","2021-0811-2",-82.50592,27.51915
+"New College Fl.","ncf","2021-0811-3",-82.58957,27.51125
+"New College Fl.","ncf","2021-0811-4",-82.59719,27.5182
+"New College Fl.","ncf","2021-0811-5",-82.63,27.52549
+"New College Fl.","ncf","2021-0812-1",-82.57681,27.56305
+"New College Fl.","ncf","2021-0812-2",-82.5891,27.56143
+"New College Fl.","ncf","2021-0812-3",-82.60729,27.55005
+"New College Fl.","ncf","2021-0812-4",-82.60712,27.55392
+"New College Fl.","ncf","2021-0812-5",-82.60076,27.53393
+"New College Fl.","ncf","2021-0812-6",-82.59642,27.53401
+"New College Fl.","ncf","2021-0812-7",-82.60101,27.53681
+"New College Fl.","ncf","2021-0812-8",-82.58252,27.55795
+"Pinellas Co.","pinco","BH02",-82.56236,27.60739
+"Pinellas Co.","pinco","BP1",-82.515124,27.6966468
+"Pinellas Co.","pinco","BP2",-82.5200807,27.6986036
+"Pinellas Co.","pinco","CB1",-82.5994258,27.5969301
+"Pinellas Co.","pinco","CB2",-82.5962787,27.5966766
+"Pinellas Co.","pinco","CB3",-82.5922255,27.5966202
+"Pinellas Co.","pinco","CB4",-82.5758245,27.5973683
+"Pinellas Co.","pinco","CB5",-82.5799701,27.6001599
+"Pinellas Co.","pinco","CB6",-82.5862114,27.6007818
+"Pinellas Co.","pinco","CB7",-82.5797226,27.6038394
+"Pinellas Co.","pinco","CB8",-82.5859968,27.5976517
+"Pinellas Co.","pinco","CR1",-82.5233517,27.6861018
+"Pinellas Co.","pinco","CR2",-82.527336,27.6870898
+"Pinellas Co.","pinco","Desoto-1",-82.72444,27.610558
+"Pinellas Co.","pinco","Desoto-2",-82.707695,27.618507
+"Pinellas Co.","pinco","Desoto-3",-82.689767,27.634237
+"Pinellas Co.","pinco","E7-A",-82.6212,27.72306
+"Pinellas Co.","pinco","E7-B",-82.621,27.7542
+"Pinellas Co.","pinco","E7-C",-82.6226,27.70455
+"Pinellas Co.","pinco","E7-D",-82.6215,27.71755
+"Pinellas Co.","pinco","FD-A-21-04",-82.70364,27.63022
+"Pinellas Co.","pinco","FD-B-21-04",-82.73225,27.61594
+"Pinellas Co.","pinco","FD-C-21-04",-82.72099,27.62323
+"Pinellas Co.","pinco","FD-D-21-04",-82.72245,27.62661
+"Pinellas Co.","pinco","FD A 21 03",-82.7049521,27.6416288
+"Pinellas Co.","pinco","FD B 21 03",-82.7060673,27.6521863
+"Pinellas Co.","pinco","FD C 21 03",-82.7179611,27.6450391
+"Pinellas Co.","pinco","FD D 21 03",-82.7027497,27.6352294
+"Pinellas Co.","pinco","JB1",-82.608252,27.5876892
+"Pinellas Co.","pinco","JB2",-82.6049301,27.5872384
+"Pinellas Co.","pinco","JB3",-82.6012266,27.587013
+"Pinellas Co.","pinco","JB4",-82.5945012,27.5882401
+"Pinellas Co.","pinco","JB5",-82.5913732,27.5899338
+"Pinellas Co.","pinco","JB6",-82.5873305,27.592756
+"Pinellas Co.","pinco","LC1",-82.49992,27.7122439
+"Pinellas Co.","pinco","LC2",-82.5031506,27.7136686
+"Pinellas Co.","pinco","LM1",-82.4805269,27.7176708
+"Pinellas Co.","pinco","LM2",-82.4890529,27.7201599
+"Pinellas Co.","pinco","MB-01",-82.604482,27.573797
+"Pinellas Co.","pinco","MC-202",-82.559067,27.665703
+"Pinellas Co.","pinco","MC1",-82.629256,27.612443
+"Pinellas Co.","pinco","MC2",-82.613389,27.601053
+"Pinellas Co.","pinco","MC3",-82.652122,27.587669
+"Pinellas Co.","pinco","MC395",-82.573072,27.567553
+"Pinellas Co.","pinco","MC396",-82.621756,27.591058
+"Pinellas Co.","pinco","MC4",-82.63588,27.573267
+"Pinellas Co.","pinco","MC422",-82.633217,27.557483
+"Pinellas Co.","pinco","MC430",-82.609581,27.527331
+"Pinellas Co.","pinco","MC431",-82.597939,27.511197
+"Pinellas Co.","pinco","MC432",-82.644553,27.5431
+"Pinellas Co.","pinco","MC452",-82.717056,27.541128
+"Pinellas Co.","pinco","MC459",-82.703611,27.528828
+"Pinellas Co.","pinco","MC5",-82.643627,27.560375
+"Pinellas Co.","pinco","MC587",-82.648742,27.473189
+"Pinellas Co.","pinco","MC6",-82.656094,27.545639
+"Pinellas Co.","pinco","MC607",-82.600517,27.399042
+"Pinellas Co.","pinco","MC658",-82.699286,27.481117
+"Pinellas Co.","pinco","MC660",-82.675222,27.453319
+"Pinellas Co.","pinco","MC668",-82.646856,27.421519
+"Pinellas Co.","pinco","MC669",-82.643167,27.411167
+"Pinellas Co.","pinco","PC1",-82.660052,27.642252
+"Pinellas Co.","pinco","PC2",-82.651548,27.633041
+"Pinellas Co.","pinco","PM Out",-82.543727,27.631487
+"Pinellas Co.","pinco","RP1",-82.5418628,27.662158
+"Pinellas Co.","pinco","RP2",-82.5451244,27.6640585
+"Pinellas Co.","pinco","S3T5",-82.53723,27.67438
+"Pinellas Co.","pinco","S3T5a-100",-82.53732,27.67439
+"Pinellas Co.","pinco","S3T6",-82.55785,27.64379
+"Pinellas Co.","pinco","S3T6a-100",-82.55777,27.64375
+"Pinellas Co.","pinco","S4T1",-82.56985,27.63397
+"Pinellas Co.","pinco","S4T1c-0",-82.56993,27.63383
+"Pinellas Co.","pinco","S4T2",-82.57349,27.6075
+"Pinellas Co.","pinco","S4T2a-0",-82.57364,27.60748
+"Pinellas Co.","pinco","S4T3",-82.59364,27.59434
+"Pinellas Co.","pinco","S4T3a-0",-82.59338,27.59422
+"Pinellas Co.","pinco","SC1",-82.5311983,27.6780451
+"Pinellas Co.","pinco","SCR1",-82.5311983,27.6780451
+"Pinellas Co.","pinco","SCR2",-82.5342024,27.6788432
+"Pinellas Co.","pinco","SkywayE-1",-82.634453,27.690718
+"Pinellas Co.","pinco","SkywayE-2",-82.66452,27.689679
+"Pinellas Co.","pinco","SkywayE-3",-82.656761,27.673814
+"Pinellas Co.","pinco","SkywayW-1",-82.692304,27.689037
+"Pinellas Co.","pinco","SkywayW-2",-82.687936,27.676516
+"Pinellas Co.","pinco","TB017",-82.544,27.666
+"Pinellas Co.","pinco","TB019",-82.567,27.607
+"Pinellas Co.","pinco","TB024",-82.592,27.593
+"Pinellas Co.","pinco","W7-A-21-04",-82.75393,27.76341
+"Pinellas Co.","pinco","W7-B-21-02",-82.73212,27.74258
+"Pinellas Co.","pinco","W7-C-21-04",-82.7213,27.73848
+"Pinellas Co.","pinco","W7-D-21-04",-82.73436,27.71858
+"Pinellas Co.","pinco","W7 A 21 03",-82.72712875,27.71442779
+"Pinellas Co.","pinco","W7 B 21 03",-82.73582841,27.71469137
+"Pinellas Co.","pinco","W7 C 21 03",-82.6930255,27.73410924
+"Pinellas Co.","pinco","W7 D 21 03",-82.71902639,27.72662635
+"Pinellas Co.","pinco","W8-A",-82.694,27.65292
+"Pinellas Co.","pinco","W8-A-21-04",-82.73792,27.65371
+"Pinellas Co.","pinco","W8-B",-82.7207,27.64857
+"Pinellas Co.","pinco","W8-B-21-04",-82.67396,27.68769
+"Pinellas Co.","pinco","W8-C",-82.7002,27.65134
+"Pinellas Co.","pinco","W8-C-21-04",-82.7056,27.63602
+"Pinellas Co.","pinco","W8-D",-82.6994,27.66779
+"Pinellas Co.","pinco","W8-D-21-04",-82.72668,27.64285
+"Pinellas Co.","pinco","W8 A 21 03",-82.71452197,27.67559883
+"Pinellas Co.","pinco","W8 B 21 03",-82.66337973,27.70071243
+"Pinellas Co.","pinco","W8 C 21 03",-82.73153366,27.64412691
+"Pinellas Co.","pinco","W8 D 21 03",-82.68993651,27.66953064
+"SBEP","sbep","AMS1",-82.6830768,27.481509
+"SBEP","sbep","AMS2",-82.6992921,27.4811241
+"SBEP","sbep","AMS3",-82.6830768,27.492195
+"SBEP","sbep","AMS4",-82.70258,27.48863
+"SBEP","sbep","CB-0",-82.5741,27.59394
+"SBEP","sbep","CB-18",-82.57795,27.59798
+"SBEP","sbep","CB-2",-82.59627,27.59658
+"SBEP","sbep","JB-1",-82.608252,27.587689
+"SBEP","sbep","JB-2",-82.60492,27.58721
+"SBEP","sbep","JB-6",-82.58733,27.592756
+"SBEP","sbep","PSB4",-82.6553721,27.5023152
+"TBEP","tbep","TBEP-BH0",-82.552508,27.605423
+"TBEP","tbep","TBEP-BH15",-82.559575,27.611731
+"TBEP","tbep","TBEP-BH25",-82.556658,27.600785
+"TBEP","tbep","TBEP-MCBH02",-82.56236,27.60739
+"UF","uf","SPPCC AHA TB017",-82.544,27.666
+"UF","uf","YSI Bishop Harbor",-82.568,27.606
+"UF","uf","YSI Cockroach",-82.542,27.674
+"UF","uf","YSI Joe Bay",-82.591,27.591
+"USF","usf","NGS-S Pond",-82.5239,27.6248
+"USF","usf","Shore",-82.5582,27.6427
+"USF","usf","USF-1",-82.5733,27.7783
+"USF","usf","USF-10",-82.61,27.7213
+"USF","usf","USF-2",-82.5295,27.79
+"USF","usf","USF-3",-82.5383,27.725
+"USF","usf","USF-4",-82.5595,27.697
+"USF","usf","USF-5",-82.6033,27.6667
+"USF","usf","USF-6",-82.5633,27.6333
+"USF","usf","USF-6B",-82.5633,27.6283
+"USF","usf","USF-7",-82.645,27.6317
+"USF","usf","USF-8",-82.7073,27.5499
+"USF","usf","USF-9",-82.7402,27.6008
+"USF","usf","USF-A",-82.5268,27.6996
+"USF","usf","USF-B",-82.5576,27.6558
+"USF","usf","USF-C",-82.5818,27.6368
+"USF","usf","USF-D",-82.6302,27.6046
+"USF","usf","USF-E",-82.6649,27.5446
+"USF","usf","USF-X",-82.5439,27.6822
+"USF","usf","USF-Y",-82.5956,27.6029
