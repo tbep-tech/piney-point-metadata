@@ -2,23 +2,27 @@ library(EML)
 library(emld)
 library(tidyverse)
 
-# rswqdat metadata --------------------------------------------------------
+# character columns need definition (in attributes)
+# numeric needs unit and numbertype (see EML::get_unitList()$units) (in attributes)
+# factors need to be defined (in attribute list)
+
+# wqdat -------------------------------------------------------------------
 
 attributes <-
   tibble::tribble(
-    ~attributeName, ~attributeDefinition,                                                 ~formatString, ~definition,        ~unit,   ~numberType,
-    "station",    "Station",                                                            NA,            "Station",          NA,       NA,
-    "date",       "Date",                                                               "YYYY-MM-DD",  NA,                 NA,       NA,
-    "source",     "Agency that took Sample - short hand",                               NA,            NA,                 NA,       NA,
-    "var",        "Variable - short hand",                                              NA,            NA,                 NA,       NA,
-    "uni",        "Result Unit of measure - short hand",                                NA,            NA,                 NA,       NA,
-    "val",        "Result Value",                                                       NA,            NA,             "dimensionless",       "real",
-    "qual",       "Qualifier value using FDEP scheme (https://floridadep.gov/sites/default/files/62-160_help-document_0.pdf)", NA,            "Qual code",                 NA,       NA,
-    "bswqstation", "Corresponding Long-term Reference Station",                         NA,            "Corresonding long-term refeference station",                 NA,       NA,
-    "lbs",        "Variable - Label",                                                   NA,            "Variable label",                 NA,       NA,
-    "nrmrng",     "Normal Value Range of Result",                                       NA,            "Normal value range",                 NA,       NA,
-    "lbunis",     "Result Unit of measure - Label",                                     NA,            "Result unit",                 NA,       NA,
-    "inrng",      "Result in Range of Normal value",                                    NA,            "Result in range",                 NA,       NA)
+    ~attributeName, ~attributeDefinition,                         ~formatString, ~definition,        ~unit,   ~numberType,
+    "station",    "Station",                                      NA,            "Station",          NA,       NA,
+    "date",       "Date",                                         "YYYY-MM-DD",  NA,                 NA,       NA,
+    "source",     "Agency that took Sample - short hand",         NA,            NA,                 NA,       NA,
+    "var",        "Variable - short hand",                        NA,            NA,                 NA,       NA,
+    "uni",        "Result Unit of measure - short hand",          NA,            NA,                 NA,       NA,
+    "val",        "Result Value",                                 NA,            NA,             "dimensionless",       "real",
+    "qual",       "Qualifier value using FDEP scheme (https://floridadep.gov/lt/files/62-160_help-document_0.pdf)", NA,            "Qual code",                 NA,       NA,
+    "bswqstation", "Corresponding Long-term Reference Station",   NA,            "Corresonding long-term refeference station",                 NA,       NA,
+    "lbs",        "Variable - Label",                             NA,            "Variable label",                 NA,       NA,
+    "nrmrng",     "Normal Value Range of Result",                 NA,            "Normal value range",                 NA,       NA,
+    "lbunis",     "Result Unit of measure - Label",               NA,            "Result unit",                 NA,       NA,
+    "inrng",      "Result in Range of Normal value",              NA,            "Result in range",                 NA,       NA)
 
 source <- c(
   cosp = "City of St. Pete",
@@ -66,7 +70,7 @@ uni <- c(
   ugl = "ug/L"
 )
 
-## Write these into the data.frame format
+# combine factors
 factors <- rbind(
   data.frame(
     attributeName = "source",
@@ -87,40 +91,40 @@ factors <- rbind(
 
 attributeList <- set_attributes(attributes, factors, col_classes = c("character", "Date", "factor", "factor", "factor", "numeric", "character", "character", "character", "character", "character", "character"))
 
-physical <- set_physical("rswqdat.csv")
+physical <- set_physical("wqdat.csv")
 
-rswqdatTable <- list(
-  entityName = "rswqdat.csv",
+wqdatTable <- list(
+  entityName = "wqdat.csv",
   entityDescription = "Tampa Bay - Piney Point Water Quality Monitoring",
   physical = physical,
   attributeList = attributeList)
 
-# rsstatloc metadata ------------------------------------------------------
-
+# wqpts -------------------------------------------------------------------
 
 attributes <-
   tibble::tribble(
-    ~attributeName, ~attributeDefinition,                                                 ~formatString, ~definition,        ~unit,   ~numberType,
-    "Source_lng", "Agency that took sample - Label",                                    NA,           "Source Label",     NA,       NA, 
-    "source",     "Agency that took Sample - short hand",                               NA,            "Source Short hand",                 NA,       NA,
-    "station",    "Station",                                                            NA,            "Station",          NA,       NA,
-    "lng",        "Longitude (Decimal Degrees)",                                        NA,            "Longitude",                 "dimensionless",      "real",
-    "lat",        "Latitude (Decimal Degrees)",                                         NA,            "Latitude",                 "dimensionless",       "real",)
+    ~attributeName, ~attributeDefinition,                 ~formatString, ~definition,        ~unit,   ~numberType,
+    "Source_lng", "Agency that took sample - Label",      NA,           "Source Label",       NA,       NA, 
+    "source",     "Agency that took Sample - short hand", NA,            "Source Short hand", NA,       NA,
+    "station",    "Station",                              NA,            "Station",           NA,       NA,
+    "lng",        "Longitude (Decimal Degrees)",          NA,            "Longitude",         "dimensionless",      "real",
+    "lat",        "Latitude (Decimal Degrees)",           NA,            "Latitude",          "dimensionless",       "real",)
 
 source <- c(
-  cosp    = "City of St. Pete",
-  epchc   = "Hillsborough County EPC",
-  esa     = "ESA",
-  fldep   = "Florida DEP",
-  mpnrd   = "Manatee County",
-  ncf     = "New College FL",
-  pinco   = "Pinellas County",
-  sbep    = "Sarasota Bay Estuary Program",
-  tbep    = "Tampa Bay Estuary Program",
-  uf      = "University of Florida",
-  usf     = "University of South Florida"
+  cosp = "City of St. Pete",
+  epchc = "Hillsborough County EPC",
+  esa = "ESA",
+  fldep = "Florida DEP",
+  mpnrd = "Manatee County",
+  ncf = "New College FL",
+  pinco = "Pinellas County",
+  sbep = "Sarasota Bay Estuary Program",
+  tbep = "Tampa Bay Estuary Program",
+  uf = "University of Florida",
+  usf = "University of South Florida"
 )
-## Write these into the data.frame format
+
+# combine factors
 factors <- rbind(
   data.frame(
     attributeName = "source",
@@ -131,21 +135,160 @@ factors <- rbind(
 
 attributeList <- set_attributes(attributes, factors, col_classes = c("character", "factor", "character", "numeric", "numeric"))
 
-physical <- set_physical("rsstatloc.csv")
+physical <- set_physical("wqpts.csv")
 
-rsstatlocTable <- list(
-  entityName = "rsstatloc.csv",
+wqptsTable <- list(
+  entityName = "wqpts.csv",
   entityDescription = "Tampa Bay - Water Quality Monitoring Station Locations",
   physical = physical,
   attributeList = attributeList)
 
+# trndat ------------------------------------------------------------------
+
+attributes <-
+  tibble::tribble(
+    ~attributeName, ~attributeDefinition,                 ~formatString, ~definition, ~unit, ~numberType,
+    "date",        "Date",                                "YYYY-MM-DD",  NA,        NA,        NA,
+    "station",     "Station",                             NA,            "Station", NA,        NA,
+    "location",    "Location on the transect",            NA,            NA,        'meter',   'real', 
+    "typ",         "Type of taxa",                        NA,            NA,        NA,        NA,
+    "taxa",        "Taxa",                                NA,            NA,        NA,        NA,
+    "abundance",   "Braun-Blanquet abundance as percent", NA,            NA,        NA,        NA,
+    "bb",          "Braun-Blanquet abundance as integer", NA,            NA,        NA,        NA
+  )
+
+typ <- c(
+  mcr = "Macroalgae",
+  sav = "Submerged Aquatic Vegetation"
+)
+
+taxa <- c(
+  Red = 'Red macroalgae (rhodophytes)', 
+  Green = 'Green macroalgae (chlorophytes)', 
+  Brown = 'Brown macroalgae', 
+  Cyanobacteria = 'Cyanobacteria macroalgae, e.g., Dapis sp.', 
+  `Thalassia testudinium` = 'Turtle grass', 
+  `Halodule wrightii` = 'Shoal grass', 
+  `Syringodium filiforme` = 'Manatee grass', 
+  `Ruppia maritima` = 'Widgeon grass', 
+  `Halophila elgelmanii` = 'Star grass', 
+  `Halophila decipiens` = 'Carribbean grass'
+)
+
+abundance <- c(
+  `<1%` = 'less than 1% cover', 
+  `1-5%` = '1-5% cover', 
+  `6-25%` = '6-25% cover', 
+  `26-50%` = '26-50% cover', 
+  `51-75%` = '51-75% cover', 
+  `76-100%` = '76-100% cover'
+)
+
+bb <- c(
+  `0` = 'less than 1% cover', 
+  `1` = '1-5% cover', 
+  `2` = '6-25% cover', 
+  `3` = '26-50% cover', 
+  `4` = '51-75% cover', 
+  `5` = '76-100% cover'
+)
+
+# combine factors
+factors <- rbind(
+  data.frame(
+    attributeName = "typ",
+    code = names(typ),
+    definition = unname(typ)
+  ),
+  data.frame(
+    attributeName = "taxa",
+    code = names(taxa),
+    definition = unname(taxa)
+  ),
+  data.frame(
+    attributeName = "abundance",
+    code = names(abundance),
+    definition = unname(abundance)
+  ),
+  data.frame(
+    attributeName = "bb",
+    code = names(bb),
+    definition = unname(bb)
+  )
+)
+
+attributeList <- set_attributes(attributes, factors, col_classes = c("Date", "character", "numeric", "factor", "factor", "factor", "factor"))
+
+physical <- set_physical("trndat.csv")
+
+trndatTable <- list(
+  entityName = "trndat.csv",
+  entityDescription = "Seagrass and macroalgae monitoring data",
+  physical = physical,
+  attributeList = attributeList)
+
+# trnpts ------------------------------------------------------------------
+
+attributes <-
+  tibble::tribble(
+    ~attributeName, ~attributeDefinition,                 ~formatString, ~definition,   ~unit,          ~numberType,
+    "source",     "Agency that surveyed the transect - short hand", NA,  "Source",      NA,              NA,
+    "station",    "Station",                              NA,            "Station",     NA,              NA,
+    "type",       "Type",                                 NA,            "Type",        NA,              NA,
+    "lng",        "Longitude (Decimal Degrees)",          NA,            NA,            "dimensionless", "real",
+    "lat",        "Latitude (Decimal Degrees)",           NA,            NA,            "dimensionless", "real")
+
+source <- c(
+  esa = "ESA",
+  sbep = "Sarasota Bay Estuary Program",
+  TBEP = "Tampa Bay Estuary Program",
+  uf = "University of Florida"
+)
+
+type <- c(
+  discrete = "discrete sample", 
+  transect = "transect survey"
+)
+
+# combine factors
+factors <- rbind(
+  data.frame(
+    attributeName = "source",
+    code = names(source),
+    definition = unname(source)
+  ),
+  data.frame(
+    attributeName = "type",
+    code = names(type),
+    definition = unname(type)
+  )
+)
+
+attributeList <- set_attributes(attributes, factors, col_classes = c("factor", "character", "factor", "numeric", "numeric"))
+
+physical <- set_physical("trnpts.csv")
+
+trnptsTable <- list(
+  entityName = "trnpts.csv",
+  entityDescription = "Seagrass and macroalgae monitoring locations",
+  physical = physical,
+  attributeList = attributeList)
+
+# phydat ------------------------------------------------------------------
+
+# phypts ------------------------------------------------------------------
+
+# kbrdat ------------------------------------------------------------------
+
+# kbrpts ------------------------------------------------------------------
+
 # universal metadata for all files ----------------------------------------
 
-geographicDescription <- "Tampa Bay Florida, Middle Tampa Bay"
+geographicDescription <- "Tampa Bay Florida, Middle/Lower Tampa Bay and portions of northern Sarasota Bay"
 
 coverage <- set_coverage(
   begin = '2021-03-23', 
-  end = '2021-11-17',
+  end = '2021-10-01',
   geographicDescription = geographicDescription,
   west = -82.8, 
   east = -82.4,
@@ -210,7 +353,7 @@ dataset <- list(
   keywordSet = keywordSet,
   coverage = coverage,
   contact = contact,
-  dataTable = list(rswqdatTable, rsstatlocTable))
+  dataTable = list(wqdatTable, wqptsTable, trndatTable, trnptsTable))
 
 eml <- list(
   packageId = uuid::UUIDgenerate(),

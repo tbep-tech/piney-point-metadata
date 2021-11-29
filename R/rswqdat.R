@@ -4,7 +4,7 @@ library(emld)
 library(tidyverse)
 
 # character columns need definition
-# numeric needs unit and numbertype (see EML::get_unitList()$list)
+# numeric needs unit and numbertype (see EML::get_unitList()$units)
 # factors need to be defined
 
 attributes <-
