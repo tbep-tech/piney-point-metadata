@@ -31,7 +31,6 @@ dp <- addMember(dp, metadataObj)
 fls <- list.files(here('data-raw'), full.names = T)
 for(fl in fls){
   cat(fl, '\t')
-  sourceData <- fl
   sourceObj <- new('DataObject', format='text/csv', filename = fl) 
   dp <- addMember(dp, sourceObj, metadataObj)
 }
