@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="2e817199-d508-428d-a93b-7b921001a37f" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="93c10f11-55ef-46eb-96e6-d776fb937a1b" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
   <dataset>
     <title>2021 Piney Point Sampling in Tampa Bay</title>
-    <creator>
+    <creator id="https://orcid.org/0000-0002-4996-0059">
       <individualName>
         <givenName>Marcus</givenName>
         <surName>Beck</surName>
       </individualName>
       <electronicMailAddress>mbeck@tbep.org</electronicMailAddress>
     </creator>
-    <abstract>From March 30th to April 9th, approximately 215 million gallons of wastewater from Piney Point were released into Tampa Bay. The Tampa Bay Estuary Program is working with regional partners to coordinate and synthesize water quality, benthic, seagrass, and fisheries monitoring data. The primary pollutants of concern for this discharge are phosphorus and nitrogen (primarily ammonia nitrogen), which may stimulate an algae response and cause adverse effects on seagrass, fish, and other wildlife.</abstract>
+    <abstract>From March 30th to April 9th, 2021, 814 million liters of mixed legacy phosphate mining wastewater and marine dredge water from the Piney Point facility were released into lower Tampa Bay (Florida, USA). This resulted in an estimated addition of 186 metric tons of total nitrogen, exceeding typical annual external nitrogen load estimates to lower Tampa Bay in a matter of days. The Tampa Bay Estuary Program in cooperation with regional partners coordinated, collected, and synthesized monitoring data to assess the potential impacts of a dense inorganic nitrogen source from Piney Point on the environmental resources of Tampa Bay over six months. This data repository includes several datasets synthesized as part of this effort, including water quality ("wq" prefix), phytoplankton ("phy" prefix), Karenia brevis (red tide organism, "kbr" prefix), and seagrass/macroalgae transect ("trn" prefix) data.  Each of these categories includes a data file for the results ("dat" suffix) and station locations ("pts" suffix).  All spatial data use the EPSG 4326 projection. Partners contributing data to this repository included Florida Department of Environmental Protection, Environmental Protection Commission of Hillsborough County, Parks and Natural Resources Department of Manatee County, Pinellas County Division of Environmental Management, Fish and Wildlife Research Institute of the Florida Fish and Wildlife Conservation Commission, City of St. Petersburg, Tampa Bay Estuary Program, Sarasota Bay Estuary Program, Environmental Science Associates, University of South Florida, University of Florida, and New College of Florida.</abstract>
     <keywordSet>
       <keyword>estuaries</keyword>
       <keyword>oceans</keyword>
@@ -27,7 +27,7 @@
       <keyword>marine</keyword>
       <keywordThesaurus>Tampa Bay vocabulary</keywordThesaurus>
     </keywordSet>
-    <intellectualRights>This dataset is released to the public and may be freely downloaded. Please keep the designated Contact person informed of any plans to use the dataset. Consultation or collaboration with the original investigators is strongly encouraged. Publications and data products that make use of the dataset must include proper acknowledgement.</intellectualRights>
+    <intellectualRights>This dataset is released to the public and may be freely downloaded. Please keep the designated contact person informed of any plans to use the dataset. Consultation or collaboration with the original investigators is strongly encouraged. Publications and data products that make use of the dataset must include proper acknowledgement.</intellectualRights>
     <coverage>
       <geographicCoverage>
         <geographicDescription>Tampa Bay Florida, Middle/Lower Tampa Bay and portions of northern Sarasota Bay</geographicDescription>
@@ -48,11 +48,6 @@
           </endDate>
         </rangeOfDates>
       </temporalCoverage>
-      <taxonomicCoverage>
-        <taxonomicClassification>
-          <taxonRankName>Species</taxonRankName>
-        </taxonomicClassification>
-      </taxonomicCoverage>
     </coverage>
     <contact>
       <individualName>

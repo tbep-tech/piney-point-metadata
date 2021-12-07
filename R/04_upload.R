@@ -3,20 +3,27 @@ library(datapack)
 library(uuid)
 library(here)
 
+# dataone vignettes here https://cran.r-project.org/web/packages/dataone/index.html
+
 # authenticate
-# token <- Sys.getenv('dataone_token')
-# options(dataone_token = token)
+token <- Sys.getenv('dataone_token')
+options(dataone_token = token)
 
-token <- Sys.getenv('dataone_test_token')
-options(dataone_test_token = token)
+# prod node for KNB
+cn <- CNode('PROD')
+mn <- getMNode(cn, 'urn:node:KNB')
 
-# # prod node for KNB
-# cn <- CNode('PROD')
-# mn <- getMNode(cn, 'urn:node:KNB')
+# # staging/test node for KNB
 
-# staging/test node for KNB
-cn <- CNode('STAGING')
-mn <- getMNode(cn, 'urn:node:mnTestKNB')
+# # authenticate
+# token <- Sys.getenv('dataone_test_token')
+# options(dataone_test_token = token)
+
+# cn <- CNode('STAGING')
+# mn <- getMNode(cn, 'urn:node:mnTestKNB')
+
+# verify credentials authenticated
+echoCredentials(cn)
 
 # initiate data package
 dp <- new('DataPackage')
@@ -24,13 +31,13 @@ dp <- new('DataPackage')
 # xml metadata file
 emlFile <- here('ppdat.xml')
 doi <- generateIdentifier(mn, 'DOI')
-metadataObj <- new('DataObject', format = 'eml://ecoinformatics.org/eml-2.1.1', filename = emlFile)
+metadataObj <- new('DataObject', id = doi, format = 'eml://ecoinformatics.org/eml-2.1.1', filename = emlFile)
 dp <- addMember(dp, metadataObj)
 
 # csv data files, add to data package
 fls <- list.files(here('data-raw'), full.names = T)
 for(fl in fls){
-  cat(fl, '\t')
+  cat(basename(fl), '\t')
   sourceObj <- new('DataObject', format='text/csv', filename = fl) 
   dp <- addMember(dp, sourceObj, metadataObj)
 }
@@ -42,3 +49,12 @@ myAccessRules <- data.frame(subject = 'https://orcid.org/0000-0002-4996-0059', p
 cli <- D1Client(cn, mn)
 packageId <- uploadDataPackage(cli, dp, public = TRUE, accessRules = myAccessRules, quiet = FALSE)
 message(sprintf('Uploaded package with identifier: %s', packageId))
+
+##
+# # update metadata
+# cn <- CNode("STAGING")
+# mn <- getMNode(cn, "urn:node:mnStageUCSB2")
+# sysmeta <- getSystemMetadata(mn, doi)
+# sysmeta <- addAccessRule(sysmeta, "public", "read")
+# status <- updateSystemMetadata(mn, doi, sysmeta)
+

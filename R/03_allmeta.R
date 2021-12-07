@@ -441,7 +441,7 @@ coverage <- set_coverage(
   south = 27.4
 )
 
-R_person <- person("Marcus", "Beck", email = "mbeck@tbep.org")
+R_person <- person(given = "Marcus", family = "Beck", email = "mbeck@tbep.org", comment = c(ORCID = "0000-0002-4996-0059"))
 mbeck <- as_emld(R_person)
 HF_address <- list(
   deliveryPoint = "263 13th Ave South",
@@ -481,9 +481,9 @@ keywordSet <- list(
 
 title <- "2021 Piney Point Sampling in Tampa Bay"
 
-abstract <- 'From March 30th to April 9th, approximately 215 million gallons of wastewater from Piney Point were released into Tampa Bay. The Tampa Bay Estuary Program is working with regional partners to coordinate and synthesize water quality, benthic, seagrass, and fisheries monitoring data. The primary pollutants of concern for this discharge are phosphorus and nitrogen (primarily ammonia nitrogen), which may stimulate an algae response and cause adverse effects on seagrass, fish, and other wildlife.'
+abstract <- 'From March 30th to April 9th, 2021, 814 million liters of mixed legacy phosphate mining wastewater and marine dredge water from the Piney Point facility were released into lower Tampa Bay (Florida, USA). This resulted in an estimated addition of 186 metric tons of total nitrogen, exceeding typical annual external nitrogen load estimates to lower Tampa Bay in a matter of days. The Tampa Bay Estuary Program in cooperation with regional partners coordinated, collected, and synthesized monitoring data to assess the potential impacts of a dense inorganic nitrogen source from Piney Point on the environmental resources of Tampa Bay over six months. This data repository includes several datasets synthesized as part of this effort, including water quality ("wq" prefix), phytoplankton ("phy" prefix), Karenia brevis (red tide organism, "kbr" prefix), and seagrass/macroalgae transect ("trn" prefix) data.  Each of these categories includes a data file for the results ("dat" suffix) and station locations ("pts" suffix).  All spatial data use the EPSG 4326 projection. Partners contributing data to this repository included Florida Department of Environmental Protection, Environmental Protection Commission of Hillsborough County, Parks and Natural Resources Department of Manatee County, Pinellas County Division of Environmental Management, Fish and Wildlife Research Institute of the Florida Fish and Wildlife Conservation Commission, City of St. Petersburg, Tampa Bay Estuary Program, Sarasota Bay Estuary Program, Environmental Science Associates, University of South Florida, University of Florida, and New College of Florida.'
 
-intellectualRights <- 'This dataset is released to the public and may be freely downloaded. Please keep the designated Contact person informed of any plans to use the dataset. Consultation or collaboration with the original investigators is strongly encouraged. Publications and data products that make use of the dataset must include proper acknowledgement.'
+intellectualRights <- 'This dataset is released to the public and may be freely downloaded. Please keep the designated contact person informed of any plans to use the dataset. Consultation or collaboration with the original investigators is strongly encouraged. Publications and data products that make use of the dataset must include proper acknowledgement.'
 
 # combine the metadata
 dataset <- list(
